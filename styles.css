@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     background: #ACA9BB;
 }
 
@@ -24,7 +24,7 @@ header {
 .headermenu {
     display: flex;
     color: white;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
@@ -55,7 +55,7 @@ header {
 }
 
 .logotext {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 2rem;
@@ -86,7 +86,7 @@ header {
     background-size: cover;
     background-position: center;
     border: 0.0625rem solid #000000;
-    font-family: 'Alegreya';
+    font-family: 'Alegreya', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -100,7 +100,7 @@ header {
     padding-bottom: 5vh;
     align-self: center;
     margin-top: 2%;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -109,12 +109,20 @@ header {
     color: #FFFFFF;
 }
 
+#mainpagehighlight,
+#eventshighlight,
+#visithighlight,
+#getinvolvedhighlight,
+#exhibitionshighlight {
+    color: #f9c4f9;
+}
+
 /** header end */
 
 /** bringing science start */
 
 #bringscience {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.875rem;
@@ -149,7 +157,7 @@ header {
 
 .scarydinosaur p {
     width: 13.1875rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -187,12 +195,11 @@ header {
     height: 2.375rem;
     border: 0.0625rem solid #FFFFFF;
     border-radius: 0.3125rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.375rem;
-    text-align: center;
     color: #FFFFFF;
     margin: 0.7vh;
     text-align: left;
@@ -241,7 +248,7 @@ header {
 }
 
 #admissionfreeh3 {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 2.5rem;
@@ -299,7 +306,7 @@ header {
 
 #specialevents {
     text-align: center;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -338,7 +345,7 @@ header {
 }
 
 .eventbottom p {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -351,7 +358,7 @@ header {
 }
 
 .event-hs {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.125rem;
@@ -388,7 +395,7 @@ header {
     border: 0.1875rem solid #FFFFFF;
     box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     border-radius: 1.25rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -470,7 +477,7 @@ header {
 }
 
 .forp {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -480,7 +487,7 @@ header {
 }
 
 .forh {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
@@ -506,7 +513,7 @@ header {
 }
 
 .forform label {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -516,7 +523,7 @@ header {
 }
 
 #h10anyqueries {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -552,7 +559,7 @@ header {
     border: 0.0625rem solid #FFFFFF;
     border-radius: 0.625rem;
     color: white;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -588,7 +595,7 @@ footer {
 }
 
 .openinghours {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -617,7 +624,7 @@ footer {
 }
 
 #h12followus {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
@@ -634,7 +641,7 @@ footer {
 }
 
 .contactscontainer {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -644,7 +651,7 @@ footer {
 }
 
 #contactsp {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -656,7 +663,7 @@ footer {
 
 #openingh11,
 #contactsh12 {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1rem;
@@ -683,7 +690,7 @@ footer {
     align-self: center;
 }
 
-.labelcheckbox il {
+.labelcheckbox pre {
     display: none;
     color: white;
 }
@@ -716,7 +723,7 @@ footer {
 }
 
 .burgeroption {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.2rem;
@@ -770,7 +777,7 @@ footer {
 }
 
 #visith1 {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2.25rem;
@@ -781,13 +788,12 @@ footer {
 
 #entranceh2 {
     color: #FFCE50;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 2.6875rem;
     text-align: center;
-    color: #FFCE50;
 }
 
 /** visit our museum container - end **/
@@ -822,7 +828,7 @@ footer {
     background: #2336E7;
     border: 0.0625rem solid #FFFFFF;
     border-radius: 0.3125rem 0.3125rem 0rem 0rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.25rem;
@@ -844,7 +850,7 @@ footer {
 .visittexts {
     width: 95%;
     height: 21.375rem;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -920,7 +926,7 @@ footer {
 }
 
 .openingtimesp {
-    font-family: 'Alegreya SC';
+    font-family: 'Alegreya SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -946,7 +952,7 @@ footer {
     width: 100%;
     height: 3.125rem;
     background: #000000;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.25rem;
@@ -967,7 +973,7 @@ footer {
 }
 
 #contactsh8 {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.25rem;
@@ -977,7 +983,7 @@ footer {
 }
 
 .contactsdescription {
-    font-family: 'Alegreya';
+    font-family: 'Alegreya', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.25rem;
@@ -1033,7 +1039,7 @@ footer {
     height: 4.875rem;
     background: #0300AA;
     border-radius: 0.3125rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2.25rem;
@@ -1127,7 +1133,7 @@ footer {
 .exhibitiontext {
     max-width: 14rem;
     width: 95%;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -1137,7 +1143,7 @@ footer {
 }
 
 .exhibitionheaders {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
@@ -1192,7 +1198,7 @@ footer {
 }
 
 .specialeventsh1 {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -1263,7 +1269,7 @@ footer {
 }
 
 .eventsp {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -1276,7 +1282,7 @@ footer {
 }
 
 .eventsheaders {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -1285,7 +1291,7 @@ footer {
 }
 
 .eventsheaders2 {
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
@@ -1295,7 +1301,7 @@ footer {
 
 .belowimgtext {
     text-align: center;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
@@ -1339,7 +1345,7 @@ footer {
     height: 4.875rem;
     background: #026e10;
     border-radius: 0.3125rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 2rem;
@@ -1354,7 +1360,7 @@ footer {
     align-items: center;
     width: 100%;
     height: 3.125rem;
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.25rem;
@@ -1387,7 +1393,7 @@ footer {
 }
 
 .getinvolvedh3 {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 1.125rem;
@@ -1400,7 +1406,7 @@ footer {
     max-width: 16.375rem;
     width: 95%;
     min-height: 16.0625rem;
-    font-family: 'Alegreya Sans';
+    font-family: 'Alegreya Sans', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -1435,7 +1441,7 @@ footer {
 }
 
 .getinvolvedlabel {
-    font-family: 'Alegreya Sans SC';
+    font-family: 'Alegreya Sans SC', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -1484,9 +1490,12 @@ footer {
     }
 
     .mainlinks {
-        width: 80%;
         font-size: clamp(1.25rem, 0.9091rem + 1.7045vw, 2rem);
         width: clamp(11.875rem, 9.0051rem + 19.1327vw, 21.25rem);
+    }
+
+    .socialmediaicons {
+        gap: clamp(0.4rem, 0.2355rem + 1.0969vw, 0.9375rem);
     }
 
     #admissionisfree {
@@ -1554,8 +1563,7 @@ footer {
     .container2forktr {
         max-width: 95%;
         width: 39.4375rem;
-        margin-bottom: 3vh;
-        margin: 1vh 1vw 0 1vw;
+        margin: 1vh 1vw 3vh 1vw;
         min-height: 0;
     }
 
@@ -1644,6 +1652,10 @@ footer {
         height: fit-content;
     }
 
+    .getinvolvedh1 {
+        font-size: clamp(1.5rem, 1.3469rem + 1.0204vw, 2rem);
+    }
+
     #entranceh2 {
         font-size: clamp(1.25rem, 1.1735rem + 0.5102vw, 1.5rem);
     }
@@ -1653,7 +1665,7 @@ footer {
     }
 
     .specialeventsh1 {
-        font-size: clamp(0.875rem, 0.5306rem + 2.2959vw, 2rem);
+        font-size: clamp(0.7rem, 0.302rem + 2.6531vw, 2rem);
     }
 
     .belowimgtext {
