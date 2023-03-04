@@ -1229,7 +1229,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 1vw;
     margin-block: 2vh;
 }
@@ -1239,9 +1239,6 @@ footer {
     flex-direction: column;
     max-width: 30rem;
     width: 95%;
-    height: -moz-fit-content;
-    height: -webkit-fill-available;
-    height: fit-content;
     border: 0.0625rem solid #FFFFFF;
     margin-bottom: 0.5rem;
 }
@@ -1251,10 +1248,6 @@ footer {
     max-height: 52.6875rem;
     height: 100%;
     border-bottom: 0.0625rem solid #FFFFFF;
-}
-
-.eventimage3 {
-    height: 30rem;
 }
 
 .eventsheaderandtext {
