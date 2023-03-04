@@ -318,7 +318,7 @@ header {
 .eventdiv {
     max-width: 18.25rem;
     min-width: 10rem;
-    width: 95%;
+    width: 100%;
     background: #101842;
     border: 0.0625rem solid #000000;
     border-radius: 0.3125rem;
