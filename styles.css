@@ -1454,7 +1454,9 @@ footer {
     bottom: 0;
 }
 
-/** media queries Index page - start */
+/** Getinvolved page - end **/
+
+/** media queries page - start */
 
 @media (max-width: 64rem) {
     .topbanner {
@@ -1764,3 +1766,5 @@ footer {
         font-size: clamp(0.875rem, 0.125rem + 5vw, 1.125rem);
     }
 }
+
+/** media queries - end */
