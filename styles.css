@@ -767,7 +767,7 @@ footer {
     border: 0.0625rem solid #000000;
     border-radius: 0.3125rem;
     margin: 0 auto;
-    margin-bottom: 2vh;
+    margin-block: 2vh;
 }
 
 /** visit main container - end **/
@@ -1059,6 +1059,7 @@ footer {
 
 #exhibitionsh1pre {
     color: #00FF66;
+    margin: 0.5vw;
 }
 
 .exhibitionsimgtext {
