@@ -40,7 +40,7 @@ main {
 }
 
 .headermenu a:hover {
-    color: #f9c4f9;
+    color: #c58af9;
 }
 
 .headermenu li a {
@@ -129,7 +129,7 @@ main {
 #getinvolvedhighlight2,
 #exhibitionshighlight,
 #exhibitionshighlight2 {
-    color: #f9c4f9;
+    color: #aa4dfb;
 }
 
 /** header end */
@@ -508,7 +508,6 @@ main {
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.0625rem;
-    text-decoration-line: underline;
     color: #FFFFFF;
     padding: 0.625rem;
 }
