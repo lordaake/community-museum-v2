@@ -705,6 +705,7 @@ footer {
 
 .labelcheckbox {
     align-self: center;
+    color: white;
     font-size: 0;
     line-height: 0;
 }
@@ -1238,7 +1239,7 @@ footer {
 
 .upcomingpre {
     color: #00FF66;
-    margin: 0.5vw;
+    margin: 0 0.5vw 0 0.5vw;
 }
 
 .eventtexteventpage {
