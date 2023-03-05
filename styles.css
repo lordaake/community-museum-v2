@@ -116,10 +116,15 @@ main {}
 }
 
 #mainpagehighlight,
+#mainpagehighlight2,
 #eventshighlight,
+#eventshighlight2,
 #visithighlight,
+#visithighlight2,
 #getinvolvedhighlight,
-#exhibitionshighlight {
+#getinvolvedhighlight2,
+#exhibitionshighlight,
+#exhibitionshighlight2 {
     color: #f9c4f9;
 }
 
