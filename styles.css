@@ -54,6 +54,7 @@ main {
     margin-left: 2vw;
     margin-right: 2vw;
     gap: 4vw;
+    margin-bottom: 0.5vh;
 }
 
 #logotop {
