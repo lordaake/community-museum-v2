@@ -10,6 +10,8 @@ body {
 /** header start */
 
 header {
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -21,7 +23,9 @@ header {
     width: 100%;
 }
 
-main {}
+main {
+    padding-top: 8.75rem;
+}
 
 .headermenu {
     display: flex;
@@ -160,7 +164,8 @@ main {}
 }
 
 .scarydinosaur img {
-    width: 14rem;
+    max-width: 14rem;
+    width: 95%;
     background: url(pexels-oleksandr-pidvalnyi-12945058.png);
     border: 0.0625rem solid #000000;
     align-self: center;
@@ -649,7 +654,7 @@ footer {
     display: flex;
     justify-content: center;
     gap: 0.9375rem;
-    max-height: 50px;
+    max-height: 3.125rem;
 }
 
 .contactscontainer {
@@ -1149,7 +1154,7 @@ footer {
     font-size: 1.125rem;
     line-height: 1.1875rem;
     color: #000000;
-    padding: 1vh;
+    padding: 0.5vh 1vw 2vh 1vw;
 }
 
 .exhibitionheaders {
@@ -1316,7 +1321,7 @@ footer {
 
 /** Getinvolved page - start **/
 
-.maingetinvolved {
+.container1getinvolved {
     margin: 0 auto;
     max-width: 68.5625rem;
     width: 95%;
