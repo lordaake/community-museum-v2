@@ -700,11 +700,8 @@ footer {
 
 .labelcheckbox {
     align-self: center;
-}
-
-.labelcheckbox pre {
-    display: none;
-    color: white;
+    font-size: 0;
+    line-height: 0;
 }
 
 #burgermenucheckbox {
