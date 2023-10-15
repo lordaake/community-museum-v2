@@ -42,4 +42,4 @@ We encourage contributions to the Community Science Museum project. Feel free to
 
 ## Contact
 Write an email to tordakelarsson@pm.me
-Visit my linkedin.
+LinkedIn: [Tord Åke Larsson](https://www.linkedin.com/in/tord-%C3%A5ke-larsson-6b35b958/)
