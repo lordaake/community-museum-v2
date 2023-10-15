@@ -33,12 +33,9 @@ To get started with Community Science Museum, follow these steps:
 
 1. Clone the repo:
 git clone https://github.com/lordaake/Semester-Project-Finished.git
-2. Install the dependencies:
-npm install
 
 ## Running
-To run the app, use the following command:
-npm run start
+To access the Community Science Museum website, visit the [deployed](https://community-museum87.netlify.app/) site.
 
 ## Contributing
 We encourage contributions to the Community Science Museum project. Feel free to open a pull request to propose changes or improvements.
