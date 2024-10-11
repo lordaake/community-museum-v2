@@ -3,220 +3,279 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community Science Museum - Visit us</title>
+    <title>Community Science Museum - Visit Us</title>
     <meta name="description"
         content="This is the visit us page. Here you can find information about our opening times, contacts, map, shop, accessibility, guided tours, food and drink.">
-    <link rel="stylesheet" href="css-reset.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'museum-blue': '#101842',
+                        'highlight-yellow': '#FFC107', /* Improved for better contrast */
+                        'highlight-green': '#28a745', /* Changed to a more standard green */
+                        'soft-green': '#66ff99',
+                        'dark-bg': '#27144D',
+                        'primary-bg': '#0300AA',
+                        'secondary-bg': '#0D0420',
+                        'accent-bg': '#2336E7',
+                    },
+                    fontFamily: {
+                        'sans': ['Alegreya Sans', 'Arial', 'sans-serif'],
+                        'display': ['Alegreya Sans SC', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/eb8a099288.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <header>
-        <div class="logoheader">
-            <a href="index.html" class="atoplogoandtext logotext">
-                <img src="/images/open-white.png" alt="Community Science Museum Main Logo" id="logotop">
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-museum-blue shadow-md fixed w-full z-20">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="index.html" class="flex items-center text-2xl font-bold text-highlight-yellow">
+                <img src="/images/open-white.png" alt="Community Science Museum Logo" class="w-10 h-10 mr-3">
                 Community Science Museum
             </a>
-            <label for="burgermenucheckbox" class="labelcheckbox">
-                Burger Menu
-                <i class="fa-solid fa-bars burgermenuicon"></i>
-            </label>
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Home</a>
+                <a href="visit.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Visit</a>
+                <a href="exhibitions.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Exhibitions</a>
+                <a href="events.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Events</a>
+                <a href="getinvolved.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Get Involved</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-200 focus:outline-none">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
         </div>
-        <ul class="headermenu">
-            <li><a href="index.html">Main Page</a></li>
-            <li><a href="visit.html" id="visithighlight">Visit</a></li>
-            <li><a href="exhibitions.html">Exhibitions</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="getinvolved.html">Get Involved</a></li>
-        </ul>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-museum-blue shadow-md">
+            <nav class="px-6 py-4 space-y-2">
+                <a href="index.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Home</a>
+                <a href="visit.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Visit</a>
+                <a href="exhibitions.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Exhibitions</a>
+                <a href="events.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Events</a>
+                <a href="getinvolved.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Get
+                    Involved</a>
+            </nav>
+        </div>
     </header>
-    <nav class="burgermenudiv">
-        <input type="checkbox" id="burgermenucheckbox">
-        <ul class="ulburgermenu burger-menu" id="burger-menu">
-            <li class="burgerline"></li>
-            <li><a href="index.html" class="burgeroption">Main Page</a></li>
-            <li><a href="visit.html" class="burgeroption" id="visithighlight2">Visit</a></li>
-            <li><a href="exhibitions.html" class="burgeroption">Exhibitions</a></li>
-            <li><a href="events.html" class="burgeroption">Events</a></li>
-            <li><a href="getinvolved.html" class="burgeroption">Get Involved!</a></li>
-            <li class="burgerline"></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="visitmuseumcontainer">
-            <div class="visittop">
-                <h1 id="visith1">Visit Our Museum</h1>
-                <h2 id="entranceh2">Entrance is free for all!</h2>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-8">
+        <div class="max-w-7xl mx-auto bg-dark-bg rounded-lg shadow-2xl p-10">
+            <!-- Visit Top Section -->
+            <div class="bg-primary-bg rounded-lg flex flex-col items-center justify-center py-10 mb-10">
+                <h1 class="text-5xl font-extrabold text-white text-center">Visit Our Museum</h1>
+                <h2 class="text-2xl font-semibold text-highlight-yellow mt-4 text-center">Entrance is free for all!</h2>
             </div>
 
-            <div class="visit4topcontainers">
-                <div class="visitinformationcontainers">
-                    <h3 class="topbanners">We Offer Guided Tours</h3>
-                    <div class="visitimgtext">
-                        <div class="visitimgs" id="toursimg"></div>
-                        <div class="visittexts">
-                            <ul>
-                                <li id="nobullet">There are guided tours of the museum that leave every hour.
-                                </li>
-                                <li>70 NOK per person and include a handy printed guide of the museum. </li>
-                                <li>If you would like to organise a guided tour for your group of 6 or more people,
-                                    please
-                                    contact us to arrange the tour.</li>
-                                <li>Payment is done at the museum.</li>
-                            </ul>
-                        </div>
+            <!-- Information Boxes -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Guided Tours -->
+                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="bg-cover bg-center h-56"
+                        style="background-image: url('/images/pexels-tuan-pm-12166990.png');"></div>
+                    <div class="secondary-bg p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold text-white mb-4">We Offer Guided Tours</h3>
+                        <ul class="list-disc list-inside text-white space-y-2 flex-grow">
+                            <li>Guided tours depart every hour.</li>
+                            <li>70 NOK per person, includes a printed museum guide.</li>
+                            <li>Group tours for 6+ available upon request.</li>
+                            <li>Payment accepted at the museum.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="visitinformationcontainers">
-                    <h4 class="topbanners">Food and Drink</h4>
-                    <div class="visitimgtext">
-                        <div class="visitimgs" id="foodimg"></div>
-                        <div class="visittexts">
-                            <p>There is a café attached to the museum where you can get light lunches, soft drinks,
-                                coffee,
-                                snacks and more.
 
-                                Our café offers a comfortable and welcoming space where you can relax and recharge after
-                                exploring our exhibits.
-                                <br><br>
-                                We source our ingredients locally and prioritize sustainability, so
-                                you can feel good about the food you're eating.
-                            </p>
-                        </div>
+                <!-- Food and Drink -->
+                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="bg-cover bg-center h-56"
+                        style="background-image: url('/images/pexels-rene-asmussen-1581384.png');"></div>
+                    <div class="secondary-bg p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Food and Drink</h3>
+                        <p class="text-white flex-grow">
+                            Enjoy a variety of light lunches, soft drinks, coffee, snacks, and more at our attached
+                            café. Our café provides a comfortable and welcoming space to relax and recharge after
+                            exploring our exhibits.
+                            <br><br>
+                            We prioritize sustainability by sourcing our ingredients locally, ensuring that you can feel
+                            good about the food you're enjoying.
+                        </p>
                     </div>
                 </div>
-                <div class="visitinformationcontainers">
-                    <h5 class="topbanners">Shop</h5>
-                    <div class="visitimgtext">
-                        <div class="visitimgs" id="shopimg"></div>
-                        <div class="visittexts">
-                            <p>Our shop offers a range of memorabilia from the museum as well as great gifts and
-                                activity
-                                packs that allow you to continue to explore science even after you’ve left the museum.
-                                <br><br>
-                                Stop by our museum shop to pick up a souvenir from your visit or to browse our selection
-                                of
-                                science-themed gifts and educational materials.
 
-                            </p>
-                        </div>
+                <!-- Shop -->
+                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="bg-cover bg-center h-56"
+                        style="background-image: url('/images/library-1132573_1920.png'); background-position: 10%;">
+                    </div>
+                    <div class="secondary-bg p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Shop</h3>
+                        <p class="text-white flex-grow">
+                            Our shop offers a wide range of memorabilia, science-themed gifts, and educational materials
+                            that allow you to continue exploring science even after your visit. Whether you're looking
+                            for a souvenir or an engaging activity pack, our shop has something for everyone.
+                            <br><br>
+                            Visit us to pick up a unique gift or browse our selection of science-inspired merchandise.
+                        </p>
                     </div>
                 </div>
-                <div class="visitinformationcontainers">
-                    <h6 class="topbanners">Accessibility</h6>
-                    <div class="visitimgtext">
-                        <div class="visitimgs" id="accessibilityimg"></div>
-                        <div class="visittexts">
-                            <p>The museum has wheelchair accessibility ramps.
-                                We are committed to making our museum accessible to all visitors, regardless of ability.
-                                <br><br>
-                                If you have any specific accessibility needs, please don't hesitate to contact us before
-                                your visit. We will do everything we can to ensure that you have a comfortable and
-                                enjoyable
-                                experience at our museum.
-                            </p>
-                        </div>
+
+                <!-- Accessibility -->
+                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <div class="bg-cover bg-center h-56"
+                        style="background-image: url('/images/pexels-marcus-aurelius-4064339.png'); background-position: 30%;">
+                    </div>
+                    <div class="secondary-bg p-6 flex flex-col flex-grow">
+                        <h3 class="text-2xl font-semibold text-white mb-4">Accessibility</h3>
+                        <p class="text-white flex-grow">
+                            Our museum is fully equipped with wheelchair accessibility ramps, ensuring that all visitors
+                            can enjoy our exhibits comfortably. We are committed to providing an inclusive experience
+                            for everyone, regardless of ability.
+                            <br><br>
+                            If you have any specific accessibility needs, please contact us prior to your visit. We will
+                            make every effort to accommodate your requirements and ensure a pleasant experience.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="openingcontactscontainer">
-                <div class="openingtimesdiv">
-                    <p class="openinghoursh7">Opening Hours:</p>
-                    <p class="openingtimesp">
-                        Monday: Closed
-                        <br>
-                        Tuesday: 10:00 – 16:00
-                        <br>
-                        Wednesday: 10:00 – 16:00
-                        <br>
-                        Thursday: 10:00 – 16:00
-                        <br>
-                        Friday: 10:00 – 19:00
-                        <br>
-                        Saturday: 9:00 – 16:00
-                        <br>
-                        Sunday: 9:00 – 13:00
-                    </p>
+
+            <!-- Opening Hours and Contacts -->
+            <div class="flex flex-col md:flex-row justify-between items-start mt-16 space-y-12 md:space-y-0">
+                <!-- Opening Hours -->
+                <div class="bg-museum-blue rounded-lg shadow-md p-8 w-full md:w-1/2 lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-6">Opening Hours</h4>
+                    <ul class="text-gray-200 text-lg space-y-3">
+                        <li><strong>Monday:</strong> Closed</li>
+                        <li><strong>Tuesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Wednesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Thursday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Friday:</strong> 10:00 – 19:00</li>
+                        <li><strong>Saturday:</strong> 9:00 – 16:00</li>
+                        <li><strong>Sunday:</strong> 9:00 – 13:00</li>
+                    </ul>
                 </div>
-                <div class="contacts">
-                    <p id="contactsh8">Contacts:</p>
-                    <p class="contactsdescription">
-                        Community Science Museum
+                <!-- Contacts -->
+                <div class="bg-museum-blue rounded-lg shadow-md p-8 w-full md:w-1/2 lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-6">Contacts</h4>
+                    <p class="text-gray-200 text-lg">
+                        <strong>Community Science Museum</strong>
                         <br>
-                        Musegata 16
+                        Muségata 16
                         <br>
                         4010 Stavanger
                         <br>
-                        Phone: +4740852574
+                        Phone: <a href="tel:+4740852574" class="text-highlight-yellow hover:underline">+47 40852574</a>
                         <br>
-                        Email: support@cm.com
+                        Email: <a href="mailto:support@cm.com"
+                            class="text-highlight-yellow hover:underline">support@cm.com</a>
                     </p>
                 </div>
             </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2057.013848610411!2d5.730943216057597!3d58.9647190815328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a354a1d54086d%3A0xe063a25774db49f3!2sNorsk%20Barnemuseum!5e0!3m2!1sno!2sno!4v1677083559221!5m2!1sno!2sno"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="googlemap"
-                title="Google Map Of Museum"></iframe>
+
+            <!-- Google Map -->
+            <div class="mt-16 rounded-lg overflow-hidden shadow-2xl">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2057.013848610411!2d5.730943216057597!3d58.9647190815328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a354a1d54086d%3A0xe063a25774db49f3!2sNorsk%20Barnemuseum!5e0!3m2!1sno!2sno!4v1677083559221!5m2!1sno!2sno"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-96"
+                    title="Google Map Of Museum"></iframe>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <div id="footercontentcontainer">
-            <div class="openinghours">
-                <div class="openinglinetime">
-                    <div id="timeandheading">
-                        <img src="/images/time.png" alt="Time" id="timeicon">
-                        <p id="openingh11">Opening Hours:</p>
+    <!-- Footer -->
+    <footer class="bg-museum-blue text-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+                <!-- Opening Hours -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Opening Hours</h4>
+                    <ul class="text-gray-200 text-lg space-y-3">
+                        <li><strong>Monday:</strong> Closed</li>
+                        <li><strong>Tuesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Wednesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Thursday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Friday:</strong> 10:00 – 19:00</li>
+                        <li><strong>Saturday:</strong> 9:00 – 16:00</li>
+                        <li><strong>Sunday:</strong> 9:00 – 13:00</li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-highlight-yellow transition-colors duration-300">
+                            <img src="/images/facebook.png" alt="Facebook" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-highlight-yellow transition-colors duration-300">
+                            <img src="/images/instagram.png" alt="Instagram" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-highlight-yellow transition-colors duration-300">
+                            <img src="/images/tiktok.png" alt="TikTok" class="w-6 h-6">
+                        </a>
                     </div>
-                    <img src="/images/Line-1.png" alt="Line">
                 </div>
-                <p>
-                    Monday: Closed
-                    <br>
-                    Tuesday: 10:00 – 16:00
-                    <br>
-                    Wednesday: 10:00 – 16:00
-                    <br>
-                    Thursday: 10:00 – 16:00
-                    <br>
-                    Friday: 10:00 – 19:00
-                    <br>
-                    Saturday: 9:00 – 16:00
-                    <br>
-                    Sunday: 9:00 – 13:00
-                </p>
-            </div>
-            <div class="socialmedias">
-                <p id="h12followus">Follow us</p>
-                <div class="socialmediaicons">
-                    <img src="/images/instagram.png" alt="Instagram">
-                    <img src="/images/facebook.png" alt="Facebook">
-                    <img src="/images/tiktok.png" alt="tiktok">
+                <!-- Contacts -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Contacts</h4>
+                    <p class="text-gray-200 text-lg">
+                        <strong>Community Science Museum</strong>
+                        <br>
+                        Muségata 16
+                        <br>
+                        4010 Stavanger
+                        <br>
+                        Phone: <a href="tel:+4740852574" class="text-highlight-yellow hover:underline">+47 40852574</a>
+                        <br>
+                        Email: <a href="mailto:support@cm.com"
+                            class="text-highlight-yellow hover:underline">support@cm.com</a>
+                    </p>
                 </div>
             </div>
-            <div class="contactscontainer">
-                <p id="contactsh12">Contacts:</p>
-                <img src="/images/Line-1.png" alt="Line">
-                <p id="contactsp">
-                    Community Science Museum
-                    <br>
-                    Muségata 16
-                    <br>
-                    4010 Stavanger
-                    <br>
-                    Phone: +47 40852574
-                    <br>
-                    Email: support@cm.com
-                </p>
+            <!-- Footer Bottom -->
+            <div class="mt-12 border-t border-gray-500 pt-4">
+                <p class="text-center text-sm">&copy; 2024 Community Science Museum. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

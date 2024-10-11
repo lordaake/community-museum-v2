@@ -1,0 +1,43 @@
+body {
+    font-family: 'Alegreya Sans', Arial, sans-serif;
+    background: #ACA9BB;
+}
+
+/* Custom styles for background images */
+.exhibitionimg1 {
+    background-image: url('/images/ball-1010907_1920.png');
+}
+
+.exhibitionimg2 {
+    background-image: url('/images/pexels-kindel-media-8566469.png');
+    background-position-y: 10%;
+}
+
+.exhibitionimg3 {
+    background-image: url('/images/pexels-max-mishin-12227297.png');
+}
+
+.exhibitionimg4 {
+    background-image: url('/images/pexels-katarzyna-modrzejewska-1466434.png');
+    background-position: 10%;
+}
+
+.exhibitionimg5 {
+    background-image: url('/images/pexels-tim-gouw-139764.png');
+    background-position: 40%;
+}
+
+.exhibitionimg6 {
+    background-image: url('/images/pexels-oleksandr-pidvalnyi-12955799.png');
+}
+
+.exhibitionimg1,
+.exhibitionimg2,
+.exhibitionimg3,
+.exhibitionimg4,
+.exhibitionimg5,
+.exhibitionimg6 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -3,224 +3,265 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exhibitions</title>
     <meta name="description"
-        content="This is the exhibtions page. Here you can read about our 6 magical exhibitions. Namely, cosmology, robotics, evolution, ecology, art studio and dinosaurs. ">
-    <link rel="stylesheet" href="css-reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        content="This is the exhibitions page. Here you can read about our 6 magical exhibitions. Namely, cosmology, robotics, evolution, ecology, art studio and dinosaurs.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/eb8a099288.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'museum-blue': '#101842',
+                        'highlight-yellow': '#FFCE50',
+                        'highlight-green': '#00FF66',
+                        // Add more custom colors as needed
+                    },
+                    fontFamily: {
+                        'sans': ['Alegreya Sans', 'Arial', 'sans-serif'],
+                        'display': ['Alegreya Sans SC', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="logoheader">
-            <a href="index.html" class="atoplogoandtext logotext">
-                <img src="/images/open-white.png" alt="Community Science Museum Main Logo" id="logotop">
+    <!-- Header -->
+    <header class="bg-[#101842] shadow-md fixed w-full z-20">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="index.html" class="flex items-center text-2xl font-bold text-highlight-yellow">
+                <img src="/images/open-white.png" alt="Community Science Museum Logo" class="w-10 h-10 mr-3">
                 Community Science Museum
             </a>
-            <label for="burgermenucheckbox" class="labelcheckbox">
-                Burger Menu
-                <i class="fa-solid fa-bars burgermenuicon"></i>
-            </label>
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Home</a>
+                <a href="visit.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Visit</a>
+                <a href="exhibitions.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Exhibitions</a>
+                <a href="events.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Events</a>
+                <a href="getinvolved.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Get Involved</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-200 focus:outline-none">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
         </div>
-        <ul class="headermenu">
-            <li><a href="index.html">Main Page</a></li>
-            <li><a href="visit.html">Visit</a></li>
-            <li><a href="exhibitions.html" id="exhibitionshighlight">Exhibitions</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="getinvolved.html">Get Involved</a></li>
-        </ul>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#101842] shadow-md">
+            <nav class="px-6 py-4 space-y-2">
+                <a href="index.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Home</a>
+                <a href="visit.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Visit</a>
+                <a href="exhibitions.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Exhibitions</a>
+                <a href="events.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Events</a>
+                <a href="getinvolved.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Get
+                    Involved</a>
+            </nav>
+        </div>
     </header>
-    <nav class="burgermenudiv">
-        <input type="checkbox" id="burgermenucheckbox">
-        <ul class="ulburgermenu burger-menu" id="burger-menu">
-            <li class="burgerline"></li>
-            <li><a href="index.html" class="burgeroption">Main Page</a></li>
-            <li><a href="visit.html" class="burgeroption">Visit</a></li>
-            <li><a href="exhibitions.html" class="burgeroption" id="exhibitionshighlight2">Exhibitions</a></li>
-            <li><a href="events.html" class="burgeroption">Events</a></li>
-            <li><a href="getinvolved.html" class="burgeroption">Get Involved!</a></li>
-            <li class="burgerline"></li>
+
+    <nav class="md:hidden">
+        <input type="checkbox" id="burgermenucheckbox" class="hidden">
+        <ul class="hidden bg-[#101842] text-white text-center" id="burger-menu">
+            <li class="border-b border-[#8900FE]"><a href="index.html" class="block py-2">Main Page</a></li>
+            <li class="border-b border-[#8900FE]"><a href="visit.html" class="block py-2">Visit</a></li>
+            <li class="border-b border-[#8900FE]"><a href="exhibitions.html" id="exhibitionshighlight2"
+                    class="block py-2 text-[#25C0EB]">Exhibitions</a></li>
+            <li class="border-b border-[#8900FE]"><a href="events.html" class="block py-2">Events</a></li>
+            <li class="border-b border-[#8900FE]"><a href="getinvolved.html" class="block py-2">Get Involved!</a></li>
         </ul>
     </nav>
-    <main>
-        <div class="exhibitionsmaincontainer">
-            <h1 class="exhibitionsh1">Explore Our 6
-                <span id="exhibitionsh1pre"> magical </span> exhibitions:
-            </h1>
-            <div class="sixexhibitionscontainer">
-                <div class="exhibitionsimgtext" id="exhibitionsimgtextcosmology">
-                    <div class="exhibitionimg exhibitionimg1"></div>
-                    <div class="exhibitiontextcontainer">
-                        <h2 class="exhibitionheaders">Cosmology</h2>
-                        <p class="exhibitiontext">
 
-                            Explore the wonders of our cosmos.
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20">
+            <div class="container mx-auto text-center">
+                <h1 class="text-5xl font-bold text-white">
+                    Explore Our 6 <span class="text-yellow-400">Magical</span> Exhibitions
+                </h1>
+                <p class="text-2xl text-gray-200 mt-4">Discover, Learn, and Be Inspired</p>
+            </div>
+        </section>
 
-                            Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky
-                            and what we can see and know about the universe around us. We’ll locate the various
-                            constellations
-                            and galaxies that can be seen and learn a bit about the early navigators who used the stars
-                            to
-                            travel by.
-
-                            Follow the journey of our solar exploration: from early Arab traders, to Galileo’s
-                            telescope, to
-                            the latest
-                            exploration of the planets in our solar system.
-                        </p>
+        <!-- Exhibitions Grid -->
+        <section class="py-16 bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Exhibition 1 -->
+                    <div
+                        class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col bg-gradient-to-b from-indigo-500 to-indigo-300">
+                        <div class="exhibitionimg1 h-64 bg-cover bg-center"></div>
+                        <div class="p-6 flex-1">
+                            <h2 class="text-2xl font-bold text-white mb-4">Cosmology</h2>
+                            <p class="text-white">
+                                Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’,
+                                explores the night sky and what we can see and know about the universe around us. We’ll
+                                locate the various constellations and galaxies that can be seen and learn a bit about
+                                the early navigators who used the stars to travel by.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="exhibitionsimgtext" id="exhibitionsimgtextai">
-                    <div class="exhibitionimg exhibitionimg2"></div>
-                    <div class="exhibitiontextcontainer">
-                        <h2 class="exhibitionheaders">Robotics and AI</h2>
-                        <p class="exhibitiontext">
-                            The Robotics and Artificial Intelligence exhibition will showcase the latest advancements in
-                            these exciting and rapidly developing fields. Children will have the opportunity to explore
-                            the
-                            various applications of AI and robotics, from their use in everyday household items to their
-                            role in industry and beyond.
-
-                            Visitors will be able to see, touch, and interact with some of the most advanced robots and
-                            AI
-                            systems in the world, providing a hands-on understanding of how these technologies work and
-                            their potential uses in the future.
-                        </p>
+                    <!-- Exhibition 2 -->
+                    <div
+                        class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col bg-gradient-to-b from-purple-500 to-purple-300">
+                        <div class="exhibitionimg2 h-64 bg-cover bg-center"></div>
+                        <div class="p-6 flex-1">
+                            <h2 class="text-2xl font-bold text-white mb-4">Robotics and AI</h2>
+                            <p class="text-white">
+                                The Robotics and Artificial Intelligence exhibition showcases the latest advancements in
+                                these exciting fields. Interact with advanced robots and AI systems, and learn about
+                                their applications in daily life and industry.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="exhibitionsimgtext" id="exhibitionsimgtextevolution">
-                    <div class="exhibitionimg exhibitionimg3"></div>
-                    <div class="exhibitiontextcontainer">
-                        <h2 class="exhibitionheaders">Evolution</h2>
-                        <p class="exhibitiontext">
-                            For centuries, philosophers and scientists have wrestled with the question of our origins.
-                            Where
-                            do we
-                            come from and how did we get here?
-                            Since Darwin proposed his theory of evolution we have had a
-                            framework for exploring and understanding our place in this world.
-
-                            Discover the origins of life on this planet and how the species we know today have evolved
-                            our
-                            time.
-                        </p>
+                    <!-- Exhibition 3 -->
+                    <div
+                        class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col bg-gradient-to-b from-gray-400 to-gray-300">
+                        <div class="exhibitionimg3 h-64 bg-cover bg-center"></div>
+                        <div class="p-6 flex-1">
+                            <h2 class="text-2xl font-bold text-black mb-4">Evolution</h2>
+                            <p class="text-black">
+                                Discover the origins of life on Earth and how species have evolved over time. Explore
+                                the journey from the earliest forms of life to the diversity we see today.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="exhibitionsimgtext" id="exhibitionsimgtextecology">
-                    <div class="exhibitionimg exhibitionimg4"></div>
-                    <div class="exhibitiontextcontainer">
-                        <h2 class="exhibitionheaders">Ecology</h2>
-                        <p class="exhibitiontext">
-                            As we learn more and more of the impact humans are having on the planet, the more important
-                            it
-                            becomes that scientists explore how to create a sustainable future not just for humans but
-                            for
-                            the whole
-                            planet.
-
-                            In our ecology section of the museum, we unpack the dangers we currently face including
-                            global
-                            warming, extinction of species, and pollution. But we also focus on the positive ways we can
-                            all
-                            contribute to a brighter future.
-                        </p>
+                    <!-- Exhibition 4 -->
+                    <div
+                        class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col bg-gradient-to-b from-green-500 to-green-300">
+                        <div class="exhibitionimg4 h-64 bg-cover bg-center"></div>
+                        <div class="p-6 flex-1">
+                            <h2 class="text-2xl font-bold text-white mb-4">Ecology</h2>
+                            <p class="text-white">
+                                Unpack the challenges our planet faces, including global warming and pollution. Learn
+                                about sustainable solutions and how we can contribute to a brighter future.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="exhibitionsimgtext" id="exhibitionsimgtextart">
-                    <div class=" exhibitionimg exhibitionimg5"></div>
-                    <div class="exhibitiontextcontainer">
-                        <h2 class="exhibitionheaders">The Art Studio</h2>
-                        <p class="exhibitiontext">
-                            This exhibition will give children a chance to explore their creative side through hands-on
-                            art
-                            activities, such as painting, drawing, and sculpting. Children can learn about different art
-                            styles and techniques, and create their own works of art to take home.
-
-                            The exhibition will feature a variety of materials, such as paints, markers, pencils, clay,
-                            and
-                            more, allowing children to experiment with different media and techniques. Children will be
-                            encouraged to try out new skills and techniques and to take risks in their artistic
-                            expression.
-                        </p>
+                    <!-- Exhibition 5 -->
+                    <div
+                        class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col bg-gradient-to-b from-yellow-500 to-yellow-300">
+                        <div class="exhibitionimg5 h-64 bg-cover bg-center"></div>
+                        <div class="p-6 flex-1">
+                            <h2 class="text-2xl font-bold text-black mb-4">The Art Studio</h2>
+                            <p class="text-black">
+                                Unleash your creativity in our Art Studio. Engage in hands-on activities like painting,
+                                drawing, and sculpting. Experiment with different media and techniques.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="exhibitionsimgtext" id="exhibitionsimgtextdinosaur">
-                    <div class="exhibitionimg exhibitionimg6"></div>
-                    <div class="exhibitiontextcontainer">
-                        <h2 class="exhibitionheaders">Dinosaurs</h2>
-                        <p class="exhibitiontext">
-                            The World of Dinosaurs is an educational and interactive exhibition that transports children
-                            back in time to the era of the dinosaurs. With life-size models, fossils, and hands-on
-                            displays,
-                            children can learn about different dinosaur species and their habitats.
-
-                            Visitors will have the chance to touch and inspect real fossils, learn about the various
-                            types
-                            of dinosaurs that roamed the earth, and discover how they lived and hunted.
-                        </p>
+                    <!-- Exhibition 6 -->
+                    <div
+                        class="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300 flex flex-col bg-gradient-to-b from-pink-500 to-pink-300">
+                        <div class="exhibitionimg6 h-64 bg-cover bg-center"></div>
+                        <div class="p-6 flex-1">
+                            <h2 class="text-2xl font-bold text-white mb-4">Dinosaurs</h2>
+                            <p class="text-white">
+                                Travel back in time to the era of the dinosaurs. Explore life-size models, fossils, and
+                                interactive displays to learn about these magnificent creatures.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer>
-        <div id="footercontentcontainer">
-            <div class="openinghours">
-                <div class="openinglinetime">
-                    <div id="timeandheading">
-                        <img src="/images/time.png" alt="Time" id="timeicon">
-                        <p id="openingh11">Opening Hours:</p>
+
+    <footer class="bg-[#101842] text-gray-200 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+                <!-- Opening Hours -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-yellow-400 mb-4">Opening Hours</h4>
+                    <ul class="text-gray-200 text-lg space-y-3">
+                        <li><strong>Monday:</strong> Closed</li>
+                        <li><strong>Tuesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Wednesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Thursday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Friday:</strong> 10:00 – 19:00</li>
+                        <li><strong>Saturday:</strong> 9:00 – 16:00</li>
+                        <li><strong>Sunday:</strong> 9:00 – 13:00</li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-yellow-400 mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-yellow-400 transition-colors duration-300">
+                            <img src="/images/facebook.png" alt="Facebook" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-yellow-400 transition-colors duration-300">
+                            <img src="/images/instagram.png" alt="Instagram" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-yellow-400 transition-colors duration-300">
+                            <img src="/images/tiktok.png" alt="TikTok" class="w-6 h-6">
+                        </a>
                     </div>
-                    <img src="/images/Line-1.png" alt="Line">
                 </div>
-                <p>
-                    Monday: Closed
-                    <br>
-                    Tuesday: 10:00 – 16:00
-                    <br>
-                    Wednesday: 10:00 – 16:00
-                    <br>
-                    Thursday: 10:00 – 16:00
-                    <br>
-                    Friday: 10:00 – 19:00
-                    <br>
-                    Saturday: 9:00 – 16:00
-                    <br>
-                    Sunday: 9:00 – 13:00
-                </p>
-            </div>
-            <div class="socialmedias">
-                <p id="h12followus">Follow us</p>
-                <div class="socialmediaicons">
-                    <img src="/images/instagram.png" alt="Instagram">
-                    <img src="/images/facebook.png" alt="Facebook">
-                    <img src="/images/tiktok.png" alt="tiktok">
+                <!-- Contacts -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-yellow-400 mb-4">Contacts</h4>
+                    <p class="text-gray-200 text-lg">
+                        <strong>Community Science Museum</strong>
+                        <br>
+                        Muségata 16
+                        <br>
+                        4010 Stavanger
+                        <br>
+                        Phone: <a href="tel:+4740852574" class="text-yellow-400 hover:underline">+47 40852574</a>
+                        <br>
+                        Email: <a href="mailto:support@cm.com"
+                            class="text-yellow-400 hover:underline">support@cm.com</a>
+                    </p>
                 </div>
             </div>
-            <div class="contactscontainer">
-                <p id="contactsh12">Contacts:</p>
-                <img src="/images/Line-1.png" alt="Line">
-                <p id="contactsp">
-                    Community Science Museum
-                    <br>
-                    Muségata 16
-                    <br>
-                    4010 Stavanger
-                    <br>
-                    Phone: +47 40852574
-                    <br>
-                    Email: support@cm.com
-                </p>
+            <!-- Footer Bottom -->
+            <div class="mt-12 border-t border-gray-500 pt-4">
+                <p class="text-center text-sm">&copy; 2024 Community Science Museum. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

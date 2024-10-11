@@ -3,271 +3,433 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Science Museum - Main Page</title>
-    <meta name="description"
-        content="This it the main page of community science museum. We have over 1000 different exhibits on the many varied subjects of science to explore.">
-    <link rel="stylesheet" href="css-reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore over 1000 different exhibits on the many varied subjects of science.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Alegreya+Sans+SC&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/eb8a099288.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'museum-blue': '#101842',
+                        'highlight-yellow': '#FFC107', /* Improved for better contrast */
+                        'highlight-green': '#28a745', /* Changed to a more standard green */
+                        'soft-green': '#66ff99',
+                        'gray-bg': '#F5F5F5',
+                        'dark-gray': '#333333',
+                        'light-gray': '#E0E0E0',
+                        'custom-brown': '#713D00',
+                    },
+                    fontFamily: {
+                        'sans': ['Alegreya Sans', 'Arial', 'sans-serif'],
+                        'display': ['Alegreya Sans SC', 'Arial', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar for modern browsers */
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 0.25rem;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <div class="logoheader">
-            <a href="index.html" class="atoplogoandtext logotext">
-                <img src="/images/open-white.png" alt="Community Science Museum Main Logo" id="logotop">
+<body class="bg-gray-bg text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-museum-blue shadow-md fixed w-full z-20">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="index.html" class="flex items-center text-2xl font-bold text-highlight-yellow">
+                <img src="/images/open-white.png" alt="Community Science Museum Logo" class="w-10 h-10 mr-3">
                 Community Science Museum
             </a>
-            <label for="burgermenucheckbox" class="labelcheckbox">
-                Burger Menu
-                <i class="fa-solid fa-bars burgermenuicon"></i>
-            </label>
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="index.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Home</a>
+                <a href="visit.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Visit</a>
+                <a href="exhibitions.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Exhibitions</a>
+                <a href="events.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Events</a>
+                <a href="getinvolved.html"
+                    class="text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Get Involved</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gray-200 focus:outline-none">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
         </div>
-        <ul class="headermenu">
-            <li><a href="index.html" id="mainpagehighlight">Main Page</a></li>
-            <li><a href="visit.html">Visit</a></li>
-            <li><a href="exhibitions.html">Exhibitions</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="getinvolved.html">Get Involved</a></li>
-        </ul>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-museum-blue shadow-md">
+            <nav class="px-6 py-4 space-y-2">
+                <a href="index.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Home</a>
+                <a href="visit.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Visit</a>
+                <a href="exhibitions.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Exhibitions</a>
+                <a href="events.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Events</a>
+                <a href="getinvolved.html"
+                    class="block text-gray-200 hover:text-highlight-yellow transition-colors duration-300">Get
+                    Involved</a>
+            </nav>
+        </div>
     </header>
-    <nav class="burgermenudiv">
-        <input type="checkbox" id="burgermenucheckbox">
-        <ul class="ulburgermenu burger-menu" id="burger-menu">
-            <li class="burgerline"></li>
-            <li><a href="index.html" class="burgeroption" id="mainpagehighlight2">Main Page</a></li>
-            <li><a href="visit.html" class="burgeroption">Visit</a></li>
-            <li><a href="exhibitions.html" class="burgeroption">Exhibitions</a></li>
-            <li><a href="events.html" class="burgeroption">Events</a></li>
-            <li><a href="getinvolved.html" class="burgeroption">Get Involved!</a></li>
-            <li class="burgerline"></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="topbanner">
-            <h1 id="bringscience">Bringing Science to Life</h1>
-            <p>We have over 1000 different exhibits on the many varied subjects of science to explore. Many of
-                these exhibits are designed for you to interact with and play around to see science come to life (apart
-                from the dinosaur exhibits – they only come to life at night when everyone’s gone home).</p>
-        </div>
-        <div class="scarydinosaur">
-            <img src="/images/pexels-oleksandr-pidvalnyi-12945058.png" alt="Dinosaure Alive">
-            <p>The dinosaurs are really alive!
-                One of them talked to me.
-                <br>
-                He said: Grawwl.
-                <br>
-                I got scared and peed my pants.
-                <br>
-                - Johnny, 5 years old
-            </p>
-        </div>
-        <div class="navmid">
-            <a href="visit.html" class="mainlinks visitus">
-                Visit us
-                <img src="/images/arrowright.png" alt="Arrow Right" class="mainlinksimg">
-            </a>
-            <a href="exhibitions.html" class="mainlinks exhibitions">
-                Exhibition spaces
-                <img src="/images/arrowright.png" alt="Arrow Right" class="mainlinksimg">
-            </a>
-            <a href="getinvolved.html" class="mainlinks getinvolved">
-                Get Involved!
-                <img src="/images/arrowright.png" alt="Arrow Right" class="mainlinksimg">
-            </a>
-        </div>
-        <div id="admissionisfree">
-            <h2 id="admissionfreeh3">Admission is <span>free!</span></h2>
-        </div>
-        <div class="eventscontainer">
-            <div class="specialeventsdiv">
-                <h3 id="specialevents">Special Events and Exhibitions:</h3>
-            </div>
-            <div class="eventhappeningcontainers">
-                <div class="eventdiv">
-                    <div class="eventtop">
-                        <h4 class="event-hs professor">Visiting Professor of Aeronautics</h4>
-                    </div>
-                    <div class="eventbottom">
-                        <div class="eventcontainerimgs sheila"></div>
-                        <p>It is our pleasure to announce that Prof Sheila Widnall from the Massachusetts Institute of
-                            Technology
-                            will be delivering 3 lectures on the development of aeronautics and where the future lies in
-                            this
-                            exciting ‘space’.</p>
-                    </div>
-                </div>
-                <div class="eventdiv">
-                    <div class="eventtop">
-                        <h5 class="event-hs nightmuseum">Night in the Museum</h5>
-                    </div>
-                    <div class="eventbottom">
-                        <img src="/images/pexels-francesco-ungaro-7381412.png" alt="Night in the museum"
-                            class="eventcontainerimgs">
-                        <p>Get your family together for an exciting night in the museum as you sleep over beside
-                            dinosaurs
-                            and
-                            science displays. Bring your own sleeping bag and get ready to rough it as we go exploring
-                            the
-                            wonders
-                            of science.</p>
-                    </div>
-                </div>
-                <div class="eventdiv">
-                    <div class="eventtop">
-                        <h6 class="event-hs energetica">Energetica Exhibition on Loan</h6>
-                    </div>
-                    <div class="eventbottom">
-                        <img src="/images/pexels-pixabay-356036.png" alt="Energetica" class="eventcontainerimgs">
-                        <p>On loan from the NEMO Science Museum in Amsterdam, the Energetica exhibition is coming to the
-                            Community Science Museum.Experience the power of the elements as we harness them.</p>
-                    </div>
-                </div>
-            </div>
-            <a href="events.html" id="eventslink">Events and Exhibitions</a>
-        </div>
 
-        <div class="forkidsteachersresearcherscontainer">
-            <div class="allthreefor">
-                <div class="container2forktr">
-                    <div class="forimages forkidsimg"></div>
-                    <p class="forh">For kids:</p>
-                    <p class="forp">Are you a young person looking to learn more about science? Come on down to our
-                        museum, there’s
-                        plenty to see and do.
-                        <br>
-                        <br>
-                        Our exhibits are designed to be accessible for interested minds,
-                        so make sure you come ready to learn and explore.
-                        We also have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00
-                        where you’ll get to explore and experiment with our team of experts.
-                        <br>
-                        <br>
-                        During the school holidays we run special holiday clubs where you can join other children your
-                        age
-                        to go
-                        on a journey of discovery. Each holiday we pick a new theme to explore. To find out more about
-                        the
-                        holiday club and how you can join, send us a message.
-                    </p>
-                </div>
-                <div class="container2forktr">
-                    <div class="forimages forteachersimg"></div>
-                    <p class="forh">For teachers:</p>
-                    <p class="forp">As a community-driven museum, we want to work with schools to create places of
-                        learning and exploring. Our team are on hand to give your students guided tours of the museum,
-                        teach them in our learning laboratory, and provide great video presentations that will excite
-                        and inspire them.
-                        <br>
-                        <br>
-                        We understand that science education is important for young people and that many schools are on
-                        tight budgets.
-                        <br>
-                        <br>
-                        Please get in touch with us here to find out more about our facilities and to arrange a time to
-                        bring your students through for a visit. We can't wait to share the wonder of science with your
-                        students!
-                    </p>
-                </div>
-                <div class="container2forktr">
-                    <div class="forimages forresearchersimg"></div>
-                    <p class="forh">Researchers:</p>
-                    <p class="forp">Are you looking to get involved with our team of researchers and academics?
-                        <br>
-                        <br>
-                        Whether you are a student looking to gain research experience or a professional researcher
-                        seeking access to our laboratory space, we can provide you with the tools and resources you need
-                        to make progress on your work.
-                        <br>
-                        <br>
-                        We also have established relationships with a number of universities around the country, which
-                        means we can offer unique opportunities to work with other researchers and to participate in
-                        cutting-edge research projects.
-                        <br>
-                        <br>
-                        If you are interested in getting involved with our team of researchers and academics, please
-                        contact us to learn more about the opportunities available.
-                    </p>
-                </div>
+    <!-- Main Content Wrapper to offset fixed header -->
+    <main class="pt-20">
+
+        <!-- Hero Section -->
+        <section class="relative bg-cover bg-center h-screen flex items-center justify-center"
+            style="background-image: url('https://images.unsplash.com/photo-1506845347893-bc5faede1eec?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="container relative z-10 text-center px-4">
+                <h1 class="text-4xl md:text-6xl font-display font-bold text-white mb-6">Bringing Science to Life</h1>
+                <p class="text-lg md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">Explore over 1000 interactive
+                    exhibits spanning various scientific disciplines. Engage, learn, and discover the wonders of science
+                    in a fun and educational environment.</p>
+                <a href="#explore"
+                    class="inline-block bg-highlight-green text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-soft-green transition duration-300">Explore
+                    Now</a>
             </div>
-            <form method="POST" class="forform">
-                <p id="h10anyqueries">Any Queries:</p>
-                <div class="labelinputqueries">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" class="inputemailname">
-                </div>
-                <div class="labelinputqueries">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="inputemailname">
-                </div>
-                <div class="labelinputqueries textareaqueries">
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message" cols="40" rows="10"></textarea>
-                </div>
-                <label for="submitqueries" id="submitlabel">Submit:</label>
-                <input type="submit" value="submit" id="submitqueries">
-            </form>
-        </div>
-    </main>
-    <footer>
-        <div id="footercontentcontainer">
-            <div class="openinghours">
-                <div class="openinglinetime">
-                    <div id="timeandheading">
-                        <img src="/images/time.png" alt="Time" id="timeicon">
-                        <p id="openingh11">Opening Hours:</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="explore" class="py-16 bg-gray-bg">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-wrap -mx-6">
+                    <!-- Feature 1 -->
+                    <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <img src="/images/pexels-tuan-pm-12166990.png" alt="Visit Us"
+                                class="w-full h-60 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-museum-blue mb-3">Visit Us</h3>
+                                <p class="text-gray-700 mb-4">Plan your visit to the museum and explore our vast
+                                    collection of exhibits that spark curiosity and wonder.</p>
+                                <a href="visit.html" class="text-highlight-green font-semibold hover:underline">Learn
+                                    More &rarr;</a>
+                            </div>
+                        </div>
                     </div>
-                    <img src="/images/Line-1.png" alt="Line">
+                    <!-- Feature 2 -->
+                    <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <img src="/images/pexels-max-mishin-12227297.png" alt="Exhibitions"
+                                class="w-full h-60 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-museum-blue mb-3">Exhibitions</h3>
+                                <p class="text-gray-700 mb-4">Discover our latest exhibitions, featuring cutting-edge
+                                    scientific discoveries and interactive displays.</p>
+                                <a href="exhibitions.html"
+                                    class="text-highlight-green font-semibold hover:underline">Discover More &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="w-full md:w-1/3 px-6">
+                        <div
+                            class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                            <img src="/images/pexels-katarzyna-modrzejewska-1466434.png" alt="Get Involved"
+                                class="w-full h-60 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-museum-blue mb-3">Get Involved</h3>
+                                <p class="text-gray-700 mb-4">Join our community! Participate in events, volunteer, or
+                                    contribute to our educational programs.</p>
+                                <a href="getinvolved.html"
+                                    class="text-highlight-green font-semibold hover:underline">Join Us &rarr;</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    Monday: Closed
-                    <br>
-                    Tuesday: 10:00 – 16:00
-                    <br>
-                    Wednesday: 10:00 – 16:00
-                    <br>
-                    Thursday: 10:00 – 16:00
-                    <br>
-                    Friday: 10:00 – 19:00
-                    <br>
-                    Saturday: 9:00 – 16:00
-                    <br>
-                    Sunday: 9:00 – 13:00
-                </p>
             </div>
-            <div class="socialmedias">
-                <p id="h12followus">Follow us</p>
-                <div class="socialmediaicons">
-                    <img src="/images/instagram.png" alt="Instagram">
-                    <img src="/images/facebook.png" alt="Facebook">
-                    <img src="/images/tiktok.png" alt="tiktok">
+        </section>
+
+        <!-- Special Events and Exhibitions Section -->
+        <section id="special-events" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="mb-12 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-museum-blue">Special Events and Exhibitions</h2>
+                </div>
+                <div class="flex flex-wrap -mx-6">
+                    <!-- Event 1 -->
+                    <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0">
+                        <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold text-museum-blue mb-3">Visiting Professor of
+                                    Aeronautics</h4>
+                                <img src="/images/pexels-katerina-holmes-5905900.png" alt="Night in the Museum"
+                                    class="w-full h-48 object-cover rounded mb-3">
+                                <p class="text-gray-700">It is our pleasure to announce that Prof Sheila Widnall from
+                                    the Massachusetts Institute of Technology will be delivering 3 lectures on the
+                                    development of aeronautics and where the future lies in this exciting ‘space’.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event 2 -->
+                    <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0">
+                        <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold text-museum-blue mb-3">Night in the Museum</h4>
+                                <img src="/images/pexels-francesco-ungaro-7381412.png" alt="Night in the Museum"
+                                    class="w-full h-48 object-cover rounded mb-3">
+                                <p class="text-gray-700">Get your family together for an exciting night in the museum as
+                                    you sleep over beside dinosaurs and science displays. Bring your own sleeping bag
+                                    and get ready to rough it as we go exploring the wonders of science.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event 3 -->
+                    <div class="w-full md:w-1/3 px-6">
+                        <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+                            <div class="p-6">
+                                <h4 class="text-xl font-semibold text-museum-blue mb-3">Energetica Exhibition on Loan
+                                </h4>
+                                <img src="/images/pexels-pixabay-356036.png" alt="Energetica"
+                                    class="w-full h-48 object-cover rounded mb-3">
+                                <p class="text-gray-700">On loan from the NEMO Science Museum in Amsterdam, the
+                                    Energetica exhibition is coming to the Community Science Museum. Experience the
+                                    power of the elements as we harness them.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="events.html"
+                        class="inline-block bg-highlight-green text-white font-semibold py-3 px-6 rounded hover:bg-soft-green transition duration-300">View
+                        All Events & Exhibitions</a>
                 </div>
             </div>
-            <div class="contactscontainer">
-                <p id="contactsh12">Contacts:</p>
-                <img src="/images/Line-1.png" alt="Line">
-                <p id="contactsp">
-                    Community Science Museum
-                    <br>
-                    Muségata 16
-                    <br>
-                    4010 Stavanger
-                    <br>
-                    Phone: +47 40852574
-                    <br>
-                    Email: support@cm.com
-                </p>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-museum-blue mb-12">What Visitors Are Saying
+                </h2>
+                <div class="flex flex-wrap -mx-6">
+                    <!-- Testimonial 1 -->
+                    <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0">
+                        <div class="bg-gray-100 rounded-lg shadow-lg p-8 h-full flex flex-col">
+                            <blockquote class="text-gray-700 italic mb-4 flex-grow">"An absolutely amazing experience!
+                                The interactive exhibits kept us engaged for hours."</blockquote>
+                            <p class="text-museum-blue font-bold text-right">– Sarah W.</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0">
+                        <div class="bg-gray-100 rounded-lg shadow-lg p-8 h-full flex flex-col">
+                            <blockquote class="text-gray-700 italic mb-4 flex-grow">"A fantastic place for kids and
+                                adults alike. We learned so much and had a blast!"</blockquote>
+                            <p class="text-museum-blue font-bold text-right">– Michael B.</p>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="w-full md:w-1/3 px-6">
+                        <div class="bg-gray-100 rounded-lg shadow-lg p-8 h-full flex flex-col">
+                            <blockquote class="text-gray-700 italic mb-4 flex-grow">"The museum's dedication to science
+                                education is evident in every exhibit."</blockquote>
+                            <p class="text-museum-blue font-bold text-right">– Emma R.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="bg-museum-blue py-16">
+            <div class="container mx-auto text-center px-4">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-highlight-yellow">Admission is Always Free!</h2>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">Join us today and explore the wonders of science
+                    without any cost.</p>
+                <a href="visit.html"
+                    class="inline-block bg-highlight-yellow text-museum-blue font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-soft-green transition duration-300">Plan
+                    Your Visit</a>
+            </div>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section id="getinvolved" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-center text-museum-blue mb-12">Get Involved with Us</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- For Kids -->
+                    <div
+                        class="bg-custom-brown rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/learn-2405206_1920.png');"></div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-semibold text-white mb-2">For Kids</h4>
+                            <p class="text-white mb-4">Are you a young person looking to learn more about science? Come
+                                on down to our museum, there’s plenty to see and do. Our exhibits are designed to be
+                                accessible for interested minds, so make sure you come ready to learn and explore.</p>
+                            <p class="text-white mb-4">We also have the Young Stars club which meets once a week on
+                                Saturdays between 10:00 and 13:00 where you’ll get to explore and experiment with our
+                                team of experts. During the school holidays, we run special holiday clubs with new
+                                themes each time. To join, send us a message.</p>
+                        </div>
+                    </div>
+                    <!-- For Teachers -->
+                    <div
+                        class="bg-custom-brown rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/people-219985_1280.jpg');"></div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-semibold text-white mb-2">For Teachers</h4>
+                            <p class="text-white mb-4">As a community-driven museum, we collaborate with schools to
+                                create engaging learning environments. Our team provides guided tours, hands-on
+                                activities in our learning laboratory, and inspiring video presentations tailored for
+                                your students.</p>
+                            <p class="text-white">Understanding the importance of science education and budget
+                                constraints, we offer flexible programs to accommodate your needs. Contact us to arrange
+                                a visit and explore the educational opportunities we provide.</p>
+                        </div>
+                    </div>
+                    <!-- For Researchers -->
+                    <div
+                        class="bg-custom-brown rounded-lg shadow-lg overflow-hidden flex flex-col hover:shadow-2xl transition-shadow duration-300">
+                        <div class="h-48 bg-cover bg-center"
+                            style="background-image: url('/images/billetto-editorial-334686.png');"></div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-semibold text-white mb-2">Researchers</h4>
+                            <p class="text-white mb-4">Are you looking to collaborate with our team of researchers and
+                                academics? Whether you're a student seeking research experience or a professional
+                                researcher needing laboratory access, we provide the resources you need to advance your
+                                work.</p>
+                            <p class="text-white">With established partnerships with universities nationwide, we offer
+                                unique opportunities to engage in cutting-edge research projects. Contact us to learn
+                                more about how you can contribute to our scientific community.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <form method="POST" class="bg-custom-brown rounded-lg shadow-lg p-8 mt-12 max-w-2xl mx-auto">
+                    <h4 class="text-xl font-bold text-center text-highlight-yellow mb-6">Any Queries:</h4>
+                    <div class="flex flex-col mb-4">
+                        <label for="name" class="text-white mb-2">Name:</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-highlight-yellow transition duration-300">
+                    </div>
+                    <div class="flex flex-col mb-4">
+                        <label for="email" class="text-white mb-2">Email:</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-highlight-yellow transition duration-300">
+                    </div>
+                    <div class="flex flex-col mb-6">
+                        <label for="message" class="text-white mb-2">Message:</label>
+                        <textarea name="message" id="message" cols="40" rows="5" required
+                            class="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-highlight-yellow transition duration-300"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-highlight-green text-white font-semibold py-3 px-6 rounded hover:bg-soft-green transition-colors duration-300">Submit</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-museum-blue text-gray-200 py-12 mt-8">
+        <div class="container max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
+                <!-- Opening Hours -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Opening Hours</h4>
+                    <ul class="text-gray-200 text-lg space-y-3">
+                        <li><strong>Monday:</strong> Closed</li>
+                        <li><strong>Tuesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Wednesday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Thursday:</strong> 10:00 – 16:00</li>
+                        <li><strong>Friday:</strong> 10:00 – 19:00</li>
+                        <li><strong>Saturday:</strong> 9:00 – 16:00</li>
+                        <li><strong>Sunday:</strong> 9:00 – 13:00</li>
+                    </ul>
+                </div>
+                <!-- Social Media -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-highlight-yellow transition-colors duration-300">
+                            <img src="/images/facebook.png" alt="Facebook" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-highlight-yellow transition-colors duration-300">
+                            <img src="/images/instagram.png" alt="Instagram" class="w-6 h-6">
+                        </a>
+                        <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer"
+                            class="hover:text-highlight-yellow transition-colors duration-300">
+                            <img src="/images/tiktok.png" alt="TikTok" class="w-6 h-6">
+                        </a>
+                    </div>
+                </div>
+                <!-- Contacts -->
+                <div class="w-full lg:w-1/3">
+                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Contacts</h4>
+                    <p class="text-gray-200 text-lg">
+                        <strong>Community Science Museum</strong>
+                        <br>
+                        Muségata 16
+                        <br>
+                        4010 Stavanger
+                        <br>
+                        Phone: <a href="tel:+4740852574" class="text-highlight-yellow hover:underline">+47 40852574</a>
+                        <br>
+                        Email: <a href="mailto:support@cm.com"
+                            class="text-highlight-yellow hover:underline">support@cm.com</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="mt-12 border-t border-gray-500 pt-4">
+                <p class="text-center text-sm">&copy; 2024 Community Science Museum. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
 </body>
 
 </html>
