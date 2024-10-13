@@ -7,6 +7,10 @@
     <meta name="description"
         content="This is the visit us page. Here you can find information about our opening times, contacts, map, shop, accessibility, guided tours, food and drink.">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,13 +21,14 @@
                 extend: {
                     colors: {
                         'museum-blue': '#101842',
-                        'highlight-yellow': '#FFC107', /* Improved for better contrast */
-                        'highlight-green': '#28a745', /* Changed to a more standard green */
+                        'highlight-yellow': '#FFC107',
+                        'highlight-green': '#28a745',
                         'soft-green': '#66ff99',
                         'dark-bg': '#27144D',
                         'primary-bg': '#0300AA',
                         'secondary-bg': '#0D0420',
                         'accent-bg': '#2336E7',
+                        'light-blue': '#E6F0FF'
                     },
                     fontFamily: {
                         'sans': ['Alegreya Sans', 'Arial', 'sans-serif'],
@@ -85,24 +90,24 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="pt-24 pb-8">
-        <div class="max-w-7xl mx-auto bg-dark-bg rounded-lg shadow-2xl p-10">
-            <!-- Visit Top Section -->
-            <div class="bg-primary-bg rounded-lg flex flex-col items-center justify-center py-10 mb-10">
-                <h1 class="text-5xl font-extrabold text-white text-center">Visit Our Museum</h1>
-                <h2 class="text-2xl font-semibold text-highlight-yellow mt-4 text-center">Entrance is free for all!</h2>
-            </div>
+    <main class="pt-24 pb-12 bg-gray-50">
+        <!-- Visit Top Section -->
+        <section class="bg-primary-bg text-white text-center py-16 px-4">
+            <h1 class="text-5xl font-extrabold tracking-tight">Visit Our Museum</h1>
+            <h2 class="text-2xl font-medium text-highlight-yellow mt-4">Entrance is free for all!</h2>
+        </section>
 
-            <!-- Information Boxes -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                <!-- Guided Tours -->
-                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
-                    <div class="bg-cover bg-center h-56"
-                        style="background-image: url('/images/pexels-tuan-pm-12166990.png');"></div>
-                    <div class="secondary-bg p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-semibold text-white mb-4">We Offer Guided Tours</h3>
-                        <ul class="list-disc list-inside text-white space-y-2 flex-grow">
+        <!-- Guided Tours -->
+        <section class="max-w-7xl mx-auto my-16 px-6 md:px-8">
+            <div class="bg-light-blue rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2">
+                        <img src="/images/pexels-tuan-pm-12166990.png" alt="Guided Tours"
+                            class="rounded-lg shadow-md w-full h-auto max-h-96 mx-auto">
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                        <h3 class="text-3xl font-semibold text-museum-blue mb-6">We Offer Guided Tours</h3>
+                        <ul class="list-disc pl-5 text-gray-800 text-lg leading-relaxed space-y-3">
                             <li>Guided tours depart every hour.</li>
                             <li>70 NOK per person, includes a printed museum guide.</li>
                             <li>Group tours for 6+ available upon request.</li>
@@ -110,14 +115,20 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Food and Drink -->
-                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
-                    <div class="bg-cover bg-center h-56"
-                        style="background-image: url('/images/pexels-rene-asmussen-1581384.png');"></div>
-                    <div class="secondary-bg p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-semibold text-white mb-4">Food and Drink</h3>
-                        <p class="text-white flex-grow">
+        <!-- Food and Drink -->
+        <section class="max-w-7xl mx-auto my-16 px-6 md:px-8">
+            <div class="bg-light-blue rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2">
+                        <img src="/images/pexels-rene-asmussen-1581384.png" alt="Food and Drink"
+                            class="rounded-lg shadow-md w-full h-auto max-h-96 mx-auto">
+                    </div>
+                    <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
+                        <h3 class="text-3xl font-semibold text-museum-blue mb-6">Food and Drink</h3>
+                        <p class="text-gray-800 text-lg leading-relaxed">
                             Enjoy a variety of light lunches, soft drinks, coffee, snacks, and more at our attached
                             café. Our café provides a comfortable and welcoming space to relax and recharge after
                             exploring our exhibits.
@@ -127,15 +138,20 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Shop -->
-                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
-                    <div class="bg-cover bg-center h-56"
-                        style="background-image: url('/images/library-1132573_1920.png'); background-position: 10%;">
+        <!-- Shop -->
+        <section class="max-w-7xl mx-auto my-16 px-6 md:px-8">
+            <div class="bg-light-blue rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2">
+                        <img src="/images/library-1132573_1920.png" alt="Shop"
+                            class="rounded-lg shadow-md w-full h-auto max-h-96 mx-auto">
                     </div>
-                    <div class="secondary-bg p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-semibold text-white mb-4">Shop</h3>
-                        <p class="text-white flex-grow">
+                    <div class="md:w-1/2 md:pl-12 mt-8 md:mt-0">
+                        <h3 class="text-3xl font-semibold text-museum-blue mb-6">Shop</h3>
+                        <p class="text-gray-800 text-lg leading-relaxed">
                             Our shop offers a wide range of memorabilia, science-themed gifts, and educational materials
                             that allow you to continue exploring science even after your visit. Whether you're looking
                             for a souvenir or an engaging activity pack, our shop has something for everyone.
@@ -144,15 +160,20 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Accessibility -->
-                <div class="bg-accent-bg rounded-lg shadow-lg overflow-hidden flex flex-col">
-                    <div class="bg-cover bg-center h-56"
-                        style="background-image: url('/images/pexels-marcus-aurelius-4064339.png'); background-position: 30%;">
+        <!-- Accessibility -->
+        <section class="max-w-7xl mx-auto my-16 px-6 md:px-8">
+            <div class="bg-light-blue rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2">
+                        <img src="/images/pexels-marcus-aurelius-4064339.png" alt="Accessibility"
+                            class="rounded-lg shadow-md w-full h-auto max-h-96 mx-auto">
                     </div>
-                    <div class="secondary-bg p-6 flex flex-col flex-grow">
-                        <h3 class="text-2xl font-semibold text-white mb-4">Accessibility</h3>
-                        <p class="text-white flex-grow">
+                    <div class="md:w-1/2 md:pr-12 mt-8 md:mt-0">
+                        <h3 class="text-3xl font-semibold text-museum-blue mb-6">Accessibility</h3>
+                        <p class="text-gray-800 text-lg leading-relaxed">
                             Our museum is fully equipped with wheelchair accessibility ramps, ensuring that all visitors
                             can enjoy our exhibits comfortably. We are committed to providing an inclusive experience
                             for everyone, regardless of ability.
@@ -163,13 +184,15 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Opening Hours and Contacts -->
-            <div class="flex flex-col md:flex-row justify-between items-start mt-16 space-y-12 md:space-y-0">
+        <!-- Opening Hours and Contacts -->
+        <section class="bg-gray-100 py-16">
+            <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Opening Hours -->
-                <div class="bg-museum-blue rounded-lg shadow-md p-8 w-full md:w-1/2 lg:w-1/3">
-                    <h4 class="text-2xl font-bold text-highlight-yellow mb-6">Opening Hours</h4>
-                    <ul class="text-gray-200 text-lg space-y-3">
+                <div class="bg-light-blue rounded-lg shadow-lg p-6 md:p-8">
+                    <h4 class="text-2xl font-bold text-museum-blue mb-6">Opening Hours</h4>
+                    <ul class="text-gray-800 text-lg space-y-3">
                         <li><strong>Monday:</strong> Closed</li>
                         <li><strong>Tuesday:</strong> 10:00 – 16:00</li>
                         <li><strong>Wednesday:</strong> 10:00 – 16:00</li>
@@ -180,32 +203,37 @@
                     </ul>
                 </div>
                 <!-- Contacts -->
-                <div class="bg-museum-blue rounded-lg shadow-md p-8 w-full md:w-1/2 lg:w-1/3">
-                    <h4 class="text-2xl font-bold text-highlight-yellow mb-6">Contacts</h4>
-                    <p class="text-gray-200 text-lg">
+                <div class="bg-light-blue rounded-lg shadow-lg p-6 md:p-8">
+                    <h4 class="text-2xl font-bold text-museum-blue mb-6">Contacts</h4>
+                    <p class="text-gray-800 text-lg leading-relaxed">
                         <strong>Community Science Museum</strong>
                         <br>
                         Muségata 16
                         <br>
                         4010 Stavanger
                         <br>
-                        Phone: <a href="tel:+4740852574" class="text-highlight-yellow hover:underline">+47 40852574</a>
+                        Phone: <a href="tel:+4740852574" class="text-museum-blue hover:underline">+47 40852574</a>
                         <br>
                         Email: <a href="mailto:support@cm.com"
-                            class="text-highlight-yellow hover:underline">support@cm.com</a>
+                            class="text-museum-blue hover:underline">support@cm.com</a>
                     </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Google Map -->
-            <div class="mt-16 rounded-lg overflow-hidden shadow-2xl">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2057.013848610411!2d5.730943216057597!3d58.9647190815328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a354a1d54086d%3A0xe063a25774db49f3!2sNorsk%20Barnemuseum!5e0!3m2!1sno!2sno!4v1677083559221!5m2!1sno!2sno"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-96"
-                    title="Google Map Of Museum"></iframe>
+        <!-- Google Map -->
+        <section class="mt-12">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2057.013848610411!2d5.730943216057597!3d58.9647190815328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x463a354a1d54086d%3A0xe063a25774db49f3!2sNorsk%20Barnemuseum!5e0!3m2!1sno!2sno!4v1677083559221!5m2!1sno!2sno"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-64 sm:h-96" title="Google Map Of Museum"></iframe>
+                </div>
             </div>
-        </div>
+        </section>
     </main>
+
 
     <!-- Footer -->
     <footer class="bg-museum-blue text-gray-200 py-12">
@@ -213,8 +241,8 @@
             <div class="flex flex-col lg:flex-row justify-between items-start gap-8">
                 <!-- Opening Hours -->
                 <div class="w-full lg:w-1/3">
-                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Opening Hours</h4>
-                    <ul class="text-gray-200 text-lg space-y-3">
+                    <h4 class="text-xl sm:text-2xl font-bold text-highlight-yellow mb-4">Opening Hours</h4>
+                    <ul class="text-gray-200 text-base sm:text-lg space-y-2 sm:space-y-3 leading-relaxed">
                         <li><strong>Monday:</strong> Closed</li>
                         <li><strong>Tuesday:</strong> 10:00 – 16:00</li>
                         <li><strong>Wednesday:</strong> 10:00 – 16:00</li>
@@ -226,7 +254,7 @@
                 </div>
                 <!-- Social Media -->
                 <div class="w-full lg:w-1/3">
-                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Follow Us</h4>
+                    <h4 class="text-xl sm:text-2xl font-bold text-highlight-yellow mb-4">Follow Us</h4>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
                             class="hover:text-highlight-yellow transition-colors duration-300">
@@ -244,8 +272,8 @@
                 </div>
                 <!-- Contacts -->
                 <div class="w-full lg:w-1/3">
-                    <h4 class="text-2xl font-bold text-highlight-yellow mb-4">Contacts</h4>
-                    <p class="text-gray-200 text-lg">
+                    <h4 class="text-xl sm:text-2xl font-bold text-highlight-yellow mb-4">Contacts</h4>
+                    <p class="text-gray-200 text-base sm:text-lg leading-relaxed">
                         <strong>Community Science Museum</strong>
                         <br>
                         Muségata 16
